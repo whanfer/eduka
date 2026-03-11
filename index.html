@@ -26,6 +26,7 @@
                 <li><a href="#costo">Costo</a></li>  
                 <li><a href="#registro">Registro</a></li>
                 <li><a href="#estudiantes">Estudiantes</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
                 <li><a href="#administracion">Administración</a></li>
             </ul>
         </nav>
@@ -162,39 +163,62 @@
         <span class="star-decoration" style="bottom: 5%; left: 15%;">🌟</span>
         <span class="star-decoration" style="bottom: 10%; right: 20%;">⭐</span>
 
-        <h2>
-            💰 Costo Mensual
-        </h2>
+        <h2>💰 Planes de Pago</h2>
+        <p class="subjects-intro">Elige el plan que mejor se adapte a ti. Todos incluyen refuerzo completo en todas las materias. 🌟</p>
 
-        <div class="pricing-card">
-            <div class="pricing-badge">
-                ¡Más incluido!
-            </div>
-            <div class="pricing-header">
-                <div class="price">
-                    <span class="price-symbol">$</span>100.000                             
+        <div class="pricing-grid">
+
+            <!-- Plan Semanal -->
+            <div class="pricing-card plan-semanal">
+                <div class="plan-icon">📅</div>
+                <h3 class="plan-title">Semanal</h3>
+                <p class="plan-desc">Paga semana a semana, sin compromisos largos</p>
+                <div class="pricing-header">
+                    <div class="price price-semanal">
+                        <span class="price-symbol">$</span>50.000
+                    </div>
+                    <div class="price-period">por semana</div>
                 </div>
-                <div class="price-period">al mes</div>
+                <div class="pricing-features">
+                    <div class="pricing-feature">Refuerzo todas las materias</div>
+                    <div class="pricing-feature">Tareas asistidas</div>
+                    <div class="pricing-feature">Material incluido</div>
+                    <div class="pricing-feature">Atención personalizada</div>
+                </div>
+                <div class="pricing-cta">
+                    <a href="#registro" class="btn btn-plan-semanal">✏️ Inscribirse</a>
+                </div>
             </div>
 
-            <div class="pricing-features">
-                <div class="pricing-feature">Refuerzo en todas las materias</div>
-                <div class="pricing-feature">Tareas asistidas y supervisadas</div>
-                <div class="pricing-feature">Prácticas para evaluaciones</div>
-                <div class="pricing-feature">Atención personalizada</div>
-                <div class="pricing-feature">Material didáctico incluido</div>
-                <div class="pricing-feature">Ambiente seguro y acogedor</div>
+            <!-- Plan Mensual -->
+            <div class="pricing-card plan-mensual">
+                <div class="pricing-badge">¡Mejor valor!</div>
+                <div class="plan-icon">⭐</div>
+                <h3 class="plan-title">Mensual</h3>
+                <p class="plan-desc">El plan más completo, paga una vez al mes</p>
+                <div class="pricing-header">
+                    <div class="price price-mensual">
+                        <span class="price-symbol">$</span>100.000
+                    </div>
+                    <div class="price-period">al mes</div>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature">Refuerzo todas las materias</div>
+                    <div class="pricing-feature">Tareas asistidas y supervisadas</div>
+                    <div class="pricing-feature">Prácticas para evaluaciones</div>
+                    <div class="pricing-feature">Atención personalizada</div>
+                    <div class="pricing-feature">Material didáctico incluido</div>
+                    <div class="pricing-feature">Ambiente seguro y acogedor</div>
+                </div>
+                <div class="pricing-cta">
+                    <a href="#registro" class="btn btn-primary">✨ ¡Inscribir Ahora!</a>
+                </div>
             </div>
 
-            <div class="pricing-cta">
-                <a href="#registro" class="btn btn-primary">
-                    ✨ ¡Inscribir Ahora!
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- Registration Section -->
+        <!-- Registration Section -->
     <section id="registro" class="registration">
         <span class="star-decoration" style="top: 8%; left: 8%;">⭐</span>
         <span class="star-decoration" style="top: 12%; right: 10%;">💫</span>
@@ -234,6 +258,39 @@
                 <input type="email" placeholder="Ej: mama@correo.com" required>
             </div>
 
+            <div class="form-group">
+                <label>💰 Plan de pago</label>
+                <div class="plan-selector">
+                    <label class="plan-option" id="opt-quincenal">
+                        <input type="radio" name="plan" value="quincenal" required>
+                        <div class="plan-option-box">
+                            <span class="plan-option-icon">📅</span>
+                            <div class="plan-option-info">
+                                <span class="plan-option-name">Quincenal</span>
+                                <span class="plan-option-price">$50.000 / quincenal</span>
+                            </div>
+                            <span class="plan-check">✓</span>
+                        </div>
+                    </label>
+                    <label class="plan-option" id="opt-mensual">
+                        <input type="radio" name="plan" value="mensual">
+                        <div class="plan-option-box">
+                            <span class="plan-option-icon">⭐</span>
+                            <div class="plan-option-info">
+                                <span class="plan-option-name">Mensual</span>
+                                <span class="plan-option-price">$100.000 / mes</span>
+                            </div>
+                            <span class="plan-check">✓</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>💬 ¿Tiene alguna dificultad el estudiante?</label>
+                <textarea id="dificultades" placeholder="Ej: Tiene dificultades con la lectura, le cuesta concentrarse, es tímido... (opcional)" rows="4"></textarea>
+            </div>
+
             <div class="form-submit">
                 <button type="submit" class="btn btn-primary">
                     🎉 Enviar Registro
@@ -258,6 +315,61 @@
             <div class="empty-state">
                 <div class="empty-state-icon">📚</div>
                 <p>Aún no hay estudiantes activos registrados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="ubicacion" class="location">
+        <h2>
+            📍 Ubicación
+        </h2>
+        <p class="location-intro">
+            Encuéntranos fácilmente. Estamos ubicados en un lugar accesible y seguro para que traigas a tus hijos.
+        </p>
+
+        <div class="location-content">
+            <div class="location-info">
+                <div class="info-card">
+                    <div class="info-icon">🏠</div>
+                    <h3>Dirección</h3>
+                    <p id="direccion">Calle 100A #58-14<br>Apartado, Antioquia</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🕐</div>
+                    <h3>Horario de Atención</h3>
+                    <p>
+                        <strong>Lunes a lunes:</strong><br>
+                        24/7<br>
+                    </p>
+                </div>
+
+                    <a href="#" id="btnGoogleMaps" class="btn btn-maps" target="_blank">
+                        🗺️ Abrir en Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div id="map" class="map-placeholder">
+                    <div class="map-overlay">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d985.5454082392416!2d-76.6117801033462!3d7.875982205603353!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e500d09770560bd%3A0xf3e181e3b3bb1a9b!2sCalle%20100A%20%2358-14%2C%20Apartad%C3%B3%2C%20Antioquia!5e1!3m2!1ses-419!2sco!4v1773097459871!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Business Photo Section -->
+        <div class="business-photo-section">
+            <h3>📸 Nuestro Espacio</h3>
+            <div class="business-photo-container">
+                <img src="exterior.jpeg" alt="EDUKA - Vista exterior" class="business-photo" id="businessPhoto" onerror="this.parentElement.classList.add('no-image')">
+                <div class="photo-placeholder">
+                    <div class="photo-icon">🏠</div>
+                    <p>Foto del negocio</p>
+                    <small>Agregue una imagen llamada "negocio-exterior.jpg" en la misma carpeta del sitio</small>
+                </div>
             </div>
         </div>
     </section>
@@ -293,16 +405,29 @@
             <button class="logout-btn" onclick="adminLogout()">Cerrar Sesión</button>
 
             <div class="admin-tabs">
-                <button class="admin-tab active" onclick="showTab('pending')">
+                <button class="admin-tab active" onclick="showTab('dashboard')">
+                    📊 Dashboard
+                </button>
+                <button class="admin-tab" onclick="showTab('pending')">
                     ⏳ Pendientes (<span id="pendingCount">0</span>)
                 </button>
                 <button class="admin-tab" onclick="showTab('active')">
                     ✅ Activos (<span id="activeCount">0</span>)
                 </button>
+                <button class="admin-tab tab-lista" onclick="showTab('lista')">
+                    📋 Llamado a Lista
+                </button>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="admin-content active" id="dashboardContent">
+                <div class="dashboard-grid" id="dashboardGrid">
+                    <!-- Se rellena por JS -->
+                </div>
             </div>
 
             <!-- Pending Students -->
-            <div class="admin-content active" id="pendingContent">
+            <div class="admin-content" id="pendingContent">
                 <div class="students-grid" id="pendingStudentsGrid">
                     <div class="empty-state">
                         <div class="empty-state-icon">⏳</div>
@@ -320,11 +445,56 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Llamado a Lista -->
+            <div class="admin-content" id="listaContent">
+                <div class="lista-header">
+                    <div class="lista-fecha">
+                        <span>📅</span>
+                        <strong id="listaFechaHoy"></strong>
+                    </div>
+                    <div class="lista-acciones">
+                        <button class="btn-guardar-lista" onclick="guardarLista()">
+                            💾 Guardar Lista de Hoy
+                        </button>
+                        <button class="btn-ver-historial" onclick="toggleHistorial()">
+                            📊 Ver Historial
+                        </button>
+                    </div>
+                </div>
+
+                <div id="listaVacia" class="empty-state" style="display:none;">
+                    <div class="empty-state-icon">👥</div>
+                    <p>No hay estudiantes activos para el llamado a lista.</p>
+                </div>
+
+                <div class="lista-tabla-wrapper" id="listaTablaWrapper">
+                    <table class="lista-tabla" id="listaTabla">
+                        <thead>
+                            <tr>
+                                <th class="col-nombre">👤 Estudiante</th>
+                                <th class="col-asistencia">✅ Asistencia</th>
+                                <th class="col-nota">😊 Comportamiento</th>
+                                <th class="col-nota">📝 Actividades</th>
+                                <th class="col-clases">🏫 Clases</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaCuerpo">
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Historial -->
+                <div class="historial-panel" id="historialPanel" style="display:none;">
+                    <h3>📊 Historial de Listas</h3>
+                    <div id="historialContenido"></div>
+                </div>
+            </div>
         </div>
     </section>
 
     
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
